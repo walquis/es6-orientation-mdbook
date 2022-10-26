@@ -1,0 +1,6 @@
+[book]
+authors = ["Chris Walquist"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Javascript ES6 Orientation"
