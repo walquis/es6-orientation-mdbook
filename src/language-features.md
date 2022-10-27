@@ -1,4 +1,4 @@
-# Chapter 2 - Language Features
+# Language Features
 
 ## Strict Mode
 Add this to the very top of a function or a script:

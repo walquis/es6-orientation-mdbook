@@ -1,8 +1,7 @@
 # Table of Contents
 
-- [Overview](./ch-overview.md)
-- [Language Features](./ch-language-features.md)
-- [Promises]()
-- [Destructuring](./ch-destructuring.md)
-  - [Array destructuring]()
-  - [Object destructuring]()
+- [Overview](./overview.md)
+- [Language Features](./language-features.md)
+- [Destructuring](./destructuring.md)
+  - [Array destructuring](./destructuring/array.md)
+  - [Object destructuring](./destructuring/object.md)

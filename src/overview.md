@@ -1,4 +1,4 @@
-# Chapter 1 - Overview
+# Overview
 
 Much of this material is derived from https://www.javatpoint.com/es6 and https://www.w3schools.com/Js.
 
