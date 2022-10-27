@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter-01-overview.html"><strong aria-hidden="true">1.</strong> Chapter 1 - Overview</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="ch-overview.html"><strong aria-hidden="true">1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="ch-language-features.html"><strong aria-hidden="true">2.</strong> Language Features</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Promises</div></li><li class="chapter-item expanded "><a href="ch-destructuring.html"><strong aria-hidden="true">4.</strong> Destructuring</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> Array destructuring</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> Object destructuring</div></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,6 +147,57 @@
 <p>The 8th edition was officially known as ECMAScript 2017, which was finalized in June 2017. It includes the async/await constructions which work using promises (In CS future, promise, deferred, and delay refers to the constructs which are used to synchronize the execution of the program in some concurrent programming languages) and generators.</p>
 <h3 id="9th-edition---ecmascript-2018"><a class="header" href="#9th-edition---ecmascript-2018">9th Edition - ECMAScript 2018.</a></h3>
 <p>The 9th edition was officially known as ECMAScript 2018, which was finalized in June 2018. It includes the new features like the rest/spread operators for variables (three dots: …identifier), asynchronous iteration, etc.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-2---language-features"><a class="header" href="#chapter-2---language-features">Chapter 2 - Language Features</a></h1>
+<h2 id="strict-mode"><a class="header" href="#strict-mode">Strict Mode</a></h2>
+<p>Add this to the very top of a function or a script:</p>
+<pre><code>&quot;use strict&quot;;
+</code></pre>
+<p>Strict mode makes several changes to normal JavaScript semantics:</p>
+<ul>
+<li>Prohibits some syntax likely to be defined within future versions of ECMAScript.</li>
+<li>Removes some of JavaScript's silent errors by changing them to throw errors.</li>
+<li>Modifies code that makes it difficult for JavaScript engines to optimize, with the result that strict mode sometimes runs faster than non-strict.</li>
+<li>In React, it's not necessary to declare strict mode.</li>
+</ul>
+<h2 id="es6-and-hoisting"><a class="header" href="#es6-and-hoisting">ES6 and Hoisting</a></h2>
+<p>Hoisting is the default behavior of moving all declarations (but not initializations) to the top of the scope before executing the code. It applies to functions and variables. It allows JavaScript to use the component before its declaration.</p>
+<ul>
+<li>Hoisting does not apply to scripts that run in strict mode.</li>
+<li>aJavaScript only hoists the variable declaration, not variable initialization.</li>
+</ul>
+<h2 id="variables"><a class="header" href="#variables">Variables</a></h2>
+<p>From <a href="https://www.w3schools.com/Js/js_variables.asp">W3Schools</a>.</p>
+<p>Declare with <code>var</code>, <code>let</code>, and <code>const</code> (or nothing)</p>
+<ul>
+<li>The <code>var</code> keyword was used in all JavaScript code from 1995 to 2015.</li>
+<li>The <code>let</code> and <code>const</code> keywords were added to JavaScript in 2015.</li>
+<li>You cannot re-declare a variable declared with <code>let</code> or <code>const</code>.</li>
+<li>You cannot re-assign a variable declared with <code>const</code>.</li>
+<li>Variables defined with <code>let</code> must be declared before use.</li>
+<li>Variables defined with <code>let</code> have Block Scope.</li>
+</ul>
+<pre><code>let person = &quot;John Doe&quot;, carName = &quot;Volvo&quot;, price = 200;
+let carName;  // Will have undefined as value
+</code></pre>
+<ul>
+<li>$ is a valid character in a variable name.  Programmers often use it as an alias for the main function in a JavaScript library.</li>
+<li>&quot;<em>&quot; is a valid character in a variable name.  A convention among programmers is to prefix private/hidden variables with &quot;</em>&quot;.</li>
+</ul>
+<h3 id="block-scope-and-variables"><a class="header" href="#block-scope-and-variables">Block Scope and variables</a></h3>
+<ul>
+<li>Before ES6 (2015), JavaScript had only Global Scope and Function Scope.</li>
+<li>let and const provide Block Scope in JavaScript.</li>
+</ul>
+<p>Variables declared inside a { } block cannot be accessed from outside the block:
+{
+let x = 2;
+}
+// x can NOT be used here
+//</p>
+<h2 id="export---exposing-to-other-files"><a class="header" href="#export---exposing-to-other-files">export - Exposing to Other Files</a></h2>
+<p>To make functions, constants, or variables available in other files, they need to be exported using the <code>export</code> keyword. Another file may then import these using the <code>import</code> keyword. This is also known as the module system.</p>
+<p>A great example is how all the tests work. Each exercise has at least one file, for example lasagna.js, which contains the implementation. Additionally, there is at least one other file, for example lasagna.spec.js, that contains the tests.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="destructuring"><a class="header" href="#destructuring">Destructuring</a></h1>
 
                     </main>
 
@@ -162,6 +213,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

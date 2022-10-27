@@ -1,3 +1,8 @@
 # Table of Contents
 
-- [Chapter 1 - Overview](./chapter-01-overview.md)
+- [Overview](./ch-overview.md)
+- [Language Features](./ch-language-features.md)
+- [Promises]()
+- [Destructuring](./ch-destructuring.md)
+  - [Array destructuring]()
+  - [Object destructuring]()
