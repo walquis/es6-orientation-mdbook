@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="overview.html"><strong aria-hidden="true">1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="language-features.html"><strong aria-hidden="true">2.</strong> Language Features</a></li><li class="chapter-item expanded "><a href="destructuring.html"><strong aria-hidden="true">3.</strong> Destructuring</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="destructuring/array.html"><strong aria-hidden="true">3.1.</strong> Array destructuring</a></li><li class="chapter-item expanded "><a href="destructuring/object.html"><strong aria-hidden="true">3.2.</strong> Object destructuring</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="overview.html"><strong aria-hidden="true">1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="language-features.html"><strong aria-hidden="true">2.</strong> Language Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="language-features/export-import.html"><strong aria-hidden="true">2.1.</strong> Export and Import</a></li></ol></li><li class="chapter-item expanded "><a href="destructuring.html"><strong aria-hidden="true">3.</strong> Destructuring</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="destructuring/array.html"><strong aria-hidden="true">3.1.</strong> Array destructuring</a></li><li class="chapter-item expanded "><a href="destructuring/object.html"><strong aria-hidden="true">3.2.</strong> Object destructuring</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -194,21 +194,67 @@ let x = 2;
 }
 // x can NOT be used here
 //</p>
-<h2 id="export---exposing-to-other-files"><a class="header" href="#export---exposing-to-other-files">export - Exposing to Other Files</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="export---exposing-to-other-files"><a class="header" href="#export---exposing-to-other-files">export - Exposing to Other Files</a></h2>
+<p>From <a href="https://exercism.org/tracks/javascript/concepts/basics">Exercism.org</a></p>
 <p>To make functions, constants, or variables available in other files, they need to be exported using the <code>export</code> keyword. Another file may then import these using the <code>import</code> keyword. This is also known as the module system.</p>
-<p>A great example is how all the tests work. Each exercise has at least one file, for example lasagna.js, which contains the implementation. Additionally, there is at least one other file, for example lasagna.spec.js, that contains the tests.</p>
+<p>A great example is how all the tests work. Each exercise has at least one file, for example <code>lasagna.js</code>, which contains the implementation. Additionally, there is at least one other file, for example <code>lasagna.spec.js</code>, that contains the tests.</p>
+<p>This file imports the public (i.e. exported) entities to test the implementation.</p>
+<h3 id="using-the-default-export"><a class="header" href="#using-the-default-export">Using the default export</a></h3>
+<p>From <a href="https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export#using_the_default_export">Developer.Mozilla.org</a>.</p>
+<p>If we want to export a single value or to have a fallback value for your module, you could use a default export:</p>
+<pre><code>// module &quot;my-module.js&quot;
+
+export default function cube(x) {
+  return x * x * x;
+}
+</code></pre>
+<p>Then, in another script, it is straightforward to import the default export:</p>
+<pre><code>import cube from './my-module.js';
+console.log(cube(3)); // 27
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="destructuring"><a class="header" href="#destructuring">Destructuring</a></h1>
-<h2 id="array-destructuring---values-are-extracted-by-position-or-index"><a class="header" href="#array-destructuring---values-are-extracted-by-position-or-index">Array destructuring - Values are extracted by position (or index).</a></h2>
-<p>From <a href="https://www.javatpoint.com/es6-array-destructuring">JavaTpoint</a></p>
+<p>Destructuring means to break down a complex structure into simpler parts. With the syntax of destructuring, you can extract smaller fragments from objects and arrays. It can be used for assignments and declaration of a variable.</p>
+<p>Destructuring is an efficient way to extract multiple values from data that is stored in arrays or objects. When destructuring an array, we use their positions (or index) in an assignment.</p>
+<p><a id="array-destructuring"></a></p>
+<h2 id="array-destructuring"><a class="header" href="#array-destructuring">Array destructuring</a></h2>
+<p>Values are extracted by position (or index).
+From <a href="https://www.javatpoint.com/es6-array-destructuring">JavaTpoint</a></p>
+<p><a id="object-destructuring"></a></p>
 <h2 id="object-destructuring"><a class="header" href="#object-destructuring">Object destructuring</a></h2>
 <p>In object destructuring, the values are extracted by the keys instead of position (or index).</p>
 <p>const num = {x: 100, z: 300, y: 200};<br />
 // Must use key names on LHS... {a,b} will not work!
 const {x, y} = num;</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="array-destructuring"><a class="header" href="#array-destructuring">Array destructuring</a></h1>
-<p>Wish this section could be part of destructuring.md, and referenced with an anchor, but in order to appear in the TOC, it <a href="https://github.com/rust-lang/mdBook/issues/167">has to be a separate file</a>.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="object-destructuring-1"><a class="header" href="#object-destructuring-1">Object destructuring</a></h1>
-<p>More stuff about object destructuring here.</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<p>text</p>
+<div style="break-before: page; page-break-before: always;"></div><!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="0;url=/destructuring.html#array-destructuring">
+</head>
+<body> </body>
+</html>
+<div style="break-before: page; page-break-before: always;"></div><!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="0;url=/destructuring.html#object-destructuring">
+</head>
+<body> </body>
+</html>
 
                     </main>
 

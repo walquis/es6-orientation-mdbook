@@ -47,9 +47,3 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 //
 
 
-## export - Exposing to Other Files
-To make functions, constants, or variables available in other files, they need to be exported using the `export` keyword. Another file may then import these using the `import` keyword. This is also known as the module system.
-
-A great example is how all the tests work. Each exercise has at least one file, for example lasagna.js, which contains the implementation. Additionally, there is at least one other file, for example lasagna.spec.js, that contains the tests.
-
-
